@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard de Gestión de Proyectos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Encabezado -->
+<header class="header">
+    <div class="logo">XX3C</div>
+    <div class="search-container">
+      <input type="text" placeholder="Buscar..." id="search">
+      <button id="search-btn">🔍</button>
+    </div>
+    <div class="user-menu">
+      <img src="profile.jpg" alt="Foto de Perfil" class="profile-img">
+      <span class="username">Juan Pérez</span>
+      <span class="notification-icon">🔔</span>
+      <!-- Botón hamburguesa dentro del user-menu -->
+    <button class="hamburger" id="hamburger-btn">&#9776;</button>
+
+    </div>
+
+</header>
+
+  <!-- Navegación lateral -->
+  <nav class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="#" class="active">Inicio</a></li>
+      <li><a href="#">Proyectos</a></li>
+      <li><a href="#">Estadísticas</a></li>
+      <li><a href="#">Configuración</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido Principal -->
+  <main class="main-content">
+    <section class="task-progress">
+      <h2>Progreso de Tareas</h2>
+      <div class="task-cards">
+        <div class="task-card">Tarea 1</div>
+        <div class="task-card">Tarea 2</div>
+        <div class="task-card">Tarea 3</div>
+        <div class="task-card">Tarea 4</div>
+      </div>
+    </section>
+
+    <section class="statistics">
+      <h2>Estadísticas Generales</h2>
+      <div class="stats-cards">
+        <div class="stats-card">Gráfica 1</div>
+        <div class="stats-card">Gráfica 2</div>
+        <div class="stats-card">Gráfica 3</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Feed de Comunicación -->
+  <aside class="right-sidebar">
+    <h2>Notificaciones</h2>
+    <ul>
+      <li>Nuevo mensaje en el proyecto X</li>
+      <li>Actualización en el proyecto Y</li>
+      <li>Revisión pendiente de tarea Z</li>
+    </ul>
+  </aside>
+
+  <!-- Pie de página -->
+  <footer class="footer">
+    <ul>
+      <li><a href="#">Ayuda</a></li>
+      <li><a href="#">Términos y condiciones</a></li>
+      <li><a href="#">Política de privacidad</a></li>
+    </ul>
+  </footer>
+
+  <script>
+    // Función para manejar el menú hamburguesa
+    document.getElementById('hamburger-btn').addEventListener('click', function() {
+      const sidebar = document.getElementById('sidebar');
+      sidebar.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
+

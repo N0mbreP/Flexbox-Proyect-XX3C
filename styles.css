@@ -1,0 +1,213 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Encabezado */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f1f1f1;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.search-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container input {
+  padding: 5px;
+  width: 200px;
+}
+
+.user-menu {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.notification-icon {
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+/* Navegación lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background-color: #333;
+  color: #fff;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 10px 0;
+}
+
+.sidebar a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.sidebar .active {
+  background-color: #575757;
+}
+
+.hamburger {
+  display: none;
+}
+
+/* Contenido principal */
+.main-content {
+  margin-left: 250px;
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.task-progress, .statistics {
+  margin-bottom: 20px;
+}
+
+.task-cards, .stats-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.task-card, .stats-card {
+  background-color: #f1f1f1;
+  padding: 20px;
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+.right-sidebar {
+  display: none;
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.footer li {
+  margin: 0 10px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .main-content {
+    margin-left: 200px;
+  }
+
+  .task-cards {
+    flex-direction: row;
+  }
+
+  .stats-cards {
+    flex-direction: row;
+  }
+
+  .footer ul {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: none;
+  }
+
+  .main-content {
+    margin-left: 0;
+  }
+
+  .task-cards {
+    flex-direction: column;
+  }
+
+  .stats-cards {
+    flex-direction: column;
+  }
+
+  .footer ul {
+    flex-direction: column;
+  }
+
+  .right-sidebar {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+  }
+}
+
+/* Pseudoclases */
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+.task-card:nth-child(odd) {
+  background-color: #eaeaea;
+}
